@@ -7,6 +7,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import uz.nodir.exceptionhandler.exception.GeneralException;
 import uz.nodir.exceptionhandler.exception.InsufficientFundsException;
 import uz.nodir.exceptionhandler.exception.ThirdPartyException;
@@ -60,7 +61,7 @@ public class RestAdviceConfig {
         );
     }
 
-    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ExceptionHandler(value = {MethodArgumentNotValidException.class, MethodArgumentTypeMismatchException.class})
     public ResponseEntity<?> methodArgumentNotValidException(MethodArgumentNotValidException e) {
         log.error("Taken core error. Received field is incorrect. Cause: {}", e.getMessage());
         return ResponseEntity.ok(
