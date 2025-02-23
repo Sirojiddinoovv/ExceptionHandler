@@ -51,7 +51,7 @@ ExceptionHandler
 ```
 - **Explanation:** If the request body is missing, the API returns an error indicating that the message is unreadable.
 
-![Image alt](https://github.com/Sirojiddinoovv/ExceptionHandler/raw/master/src/main/resources/static/1.jpg)
+![Image alt](https://github.com/Sirojiddinoovv/ExceptionHandler/raw/master/src/main/resources/static/2.jpg)
 
 ### Test Case 2: Invalid Client ID
 - **Request:**
@@ -71,7 +71,7 @@ ExceptionHandler
 ```
 - **Explanation:** The API validates the `client_id` field, and if it doesn’t meet expected criteria, it returns an error.
 
-![Image alt](https://github.com/Sirojiddinoovv/ExceptionHandler/raw/master/src/main/resources/static/2.jpg)
+![Image alt](https://github.com/Sirojiddinoovv/ExceptionHandler/raw/master/src/main/resources/static/1.jpg)
 
 ## How to Run
 1. Clone the repository:
