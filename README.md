@@ -38,7 +38,7 @@ ExceptionHandler
 
 ## Test Cases & Screenshots
 
-### Test Case 1: Empty Request Body
+### Test Case 1: Empty Request Body (Caught HttpMessageNotReadableException)
 - **Request:**
   - `POST http://localhost:8585/api/v1/test/client/cards`
   - Body: *(empty)*
@@ -53,7 +53,7 @@ ExceptionHandler
 
 ![Image alt](https://github.com/Sirojiddinoovv/ExceptionHandler/raw/master/src/main/resources/static/2.jpg)
 
-### Test Case 2: Invalid Client ID
+### Test Case 2: Invalid Client ID (Caught GeneralException)
 - **Request:**
   - `POST http://localhost:8585/api/v1/test/client/cards`
   - Body:
